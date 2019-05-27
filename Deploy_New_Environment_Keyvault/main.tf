@@ -13,13 +13,13 @@ module "create_network" {
 data "azurerm_resource_group" "rg_keyvault" {
   name                = "${var.rg_keyvault}"
 }
-data "azurerm_key_vault" "cloudops_keyvault" {
+data "azurerm_key_vault" "keyvault" {
   name                = "${var.keyvault_name}"
   resource_group_name = "${data.azurerm_resource_group.rg_keyvault.name}"
 }
 data "azurerm_key_vault_secret" "secret_Default-Admin-Windows-Linux-VM" {
   name      = "Default-Admin-Windows-Linux-VM"
-  vault_uri = "${data.azurerm_key_vault.cloudops_keyvault.vault_uri}"
+  vault_uri = "${data.azurerm_key_vault.keyvault.vault_uri}"
 }
 // Create Windows VM
 module "windows_vm" {
