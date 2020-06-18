@@ -1,0 +1,5 @@
+{
+  "IotHubAddress":"FALA-IoTRobot.azure-devices.net",
+  "DeviceId":"FALALegoRobot",
+  "SharedAccessKey":"uZHXHTYSwbB8x6vNsgruvffwwn5gW18mCgQMjXZsWOk="
+}
