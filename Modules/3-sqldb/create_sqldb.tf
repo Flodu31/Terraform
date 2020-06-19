@@ -5,7 +5,7 @@ data "azurerm_sql_server" "sqldemo" {
 
 resource "azurerm_sql_database" "deploy_db" {
   name                = var.db_name
-  resource_group_name = var.rg_name
+  resource_group_name = "SQL"
   location            = var.location
   server_name         = data.azurerm_sql_server.sqldemo.name
 }
